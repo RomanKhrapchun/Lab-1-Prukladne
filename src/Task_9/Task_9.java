@@ -6,17 +6,19 @@ public class Task_9 {
     public static void main(final String[] args) {
         final CustomDouble a = new CustomDouble(0.5);
         final CustomDouble b = new CustomDouble(0.3);
-
-        final Calculator calc = new Calculator();
-
-        final CustomDouble sum = calc.suma(a, b);
-        System.out.println(sum.getA() + "  " + sum.getB());
-
-        final CustomDouble minus = calc.minus(a, b);
-        System.out.println(minus.getA() + "  " + minus.getB());
-
-        System.out.println(calc.multiply(a, b));
-
-        System.out.println(calc.divide(a, b));
+        final int inputSign = 3;
+        switch (inputSign) {
+            case 1:
+                System.out.println(a.sum(b));
+                break;
+            case 2:
+                System.out.println(a.subtraction(b));
+                break;
+            case 3:
+                System.out.println(Calculator.multiply(a, b));
+                break;
+            case 4:
+                System.out.println(Calculator.divide(a, b));
+        }
     }
 }
